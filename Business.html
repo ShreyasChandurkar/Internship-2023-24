@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chaitanya Lakdi Ghana</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=PT+Serif&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Internal CSS Styles */
+        body {
+            font-family: Arial, sans-serif;
+            font-family: 'Libre Baskerville', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #72bf44;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            position: relative;
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            font-weight: 500;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: navy;
+            font-weight: 600;
+        }
+
+        .logo {
+            position: absolute;
+            left: 22px;
+            top: 40%;
+            transform: translateY(-50%);
+            font-size: 25px;
+            font-weight: 500;
+            animation: organicAnimation 2s infinite alternate;
+        }
+
+        @keyframes organicAnimation {
+            0% {
+                transform: translateY(-50%) scale(1);
+            }
+
+            100% {
+                transform: translateY(-50%) scale(1.1);
+            }
+        }
+
+        .tag-line {
+            text-align: left;
+            color: #333;
+            letter-spacing: 3px;
+            position: absolute;
+            font-weight: 600;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            position: relative;
+            height: 650px;
+            /* Adjust the height as needed */
+            background: url('./Sample/BusinessHero.jpg') no-repeat center center;
+            background-size: cover;
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 1;
+        }
+
+        .hero-content h2 {
+            font-size: 38px;
+            top: -30px;
+            margin-bottom: 100px;
+            position: relative;
+            color: lightcyan;
+            text-shadow: 0 0 5px red, 0 0 20px midnightblue;
+        }
+
+        .punch-line {
+            position: relative;
+            top: -125px;
+            font-size: 23px;
+            color: black;
+            text-align: center;
+            font-weight: 600;
+            text-decoration: underline;
+            text-shadow: 0 0 10px lightcyan, 0 0 20px white;
+        }
+
+        .hero-content h1 {
+            font-size: 70px;
+            margin-bottom: 10px;
+            color: lightcyan;
+            text-shadow: 0 0 5px red, 0 0 20px midnightblue;  
+        }
+
+        .shop-now {
+            font-size: 20px;
+            margin-top: 20px;
+            background-color: #72bf44;
+            color: white;
+            border: 2px solid #72bf44;
+            padding: 10px 20px;
+            display: inline-block;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .shop-now:hover {
+            background-color: #fff;
+            color: #72bf44;
+        }
+
+        .shop-now:hover::after {
+            transform: scaleX(1.2) scaleY(1.5);
+            opacity: 0;
+        }
+
+        .shop-now::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: white;
+            z-index: -1;
+            transform-origin: center center;
+            transform: scaleX(0) scaleY(0);
+            transition: all 0.3s ease;
+            border-radius: 5px;
+        }
+        .back-to-mainpage {
+            margin-top: 20px;
+        }
+
+        .back-to-mainpage-link {
+            color:darkblue;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bolder;
+            text-shadow: 0 0 5px white, 0 0 20px white;
+        }
+
+        .back-to-mainpage-link:hover {
+            color: red;
+            font-weight: 900;
+        }
+
+        .about {
+            background-color: #fff;
+        }
+
+        .products {
+            background-color: #f9f9f9;
+        }
+
+        .testimonials {
+            background-color: #fff;
+        }
+
+        .contact {
+            background-color: #f9f9f9;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /*About Page Banner Styling*/
+        .company-info {
+            display: flex;
+            flex-wrap: wrap;
+            height: 35vh;
+            align-content: flex-start;
+            gap: 10px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
+
+        .info-item {
+            flex: 1 1 20%;
+            /* Adjust the width as needed */
+            text-align: justify;
+            display: flex;
+            flex-direction: column;
+            align-items: first baseline;
+            padding-left: 60px;
+        }
+
+        .info-item img {
+            position: relative;
+            top: 58px;
+            right: 70px;
+            width: 55px;
+            /* adjust the size as needed */
+            height: 55px;
+            /* adjust the size as needed */
+            background-color: lightgray;
+            border-radius: 50px;
+            margin-left: 50px;
+            box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.7);
+
+        }
+
+        .info-item h3 {
+            font-size: 18px;
+            color: #333;
+            margin: 3px 0;
+            /* Adjusted margin */
+        }
+
+        .info-item h4 {
+            font-size: 20px;
+            /* Changed font size */
+            color: navy;
+            margin: 1px 0;
+            /* Adjusted margin */
+            /* Added font weight */
+        }
+
+        /* Get In Touch or Contact Us Styling*/
+
+        .contact-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 100%;
+            background-color: aliceblue;
+            padding: 48.0375px 0px 19.2125px 0px;
+            height: 400px;
+        }
+
+        .get-in-touch {
+            margin: 0px 0px 33.6px 0px;
+            font-size: 40px;
+            font-weight: lighter;
+            color: #2a2a2a;
+            position: relative;
+            top: 20px;
+
+        }
+
+        .contact-left {
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+            right: 500px;
+            bottom: 70px;
+        }
+
+        .contact-right {
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            position: relative;
+            left: 480px;
+            bottom: 185px;
+        }
+
+
+        .email h3 {
+            color: #2a2a2a;
+            margin: 0px 0px 15.4px 0px;
+            font-size: 22px;
+        }
+
+        .address h3 {
+            color: #2a2a2a;
+            margin: 0px 0px 15.4px 0px;
+            font-size: 22px;
+        }
+
+        .email p {
+            margin: 0px 0px 16px 0px;
+            color: #515151;
+            font-size: 16px;
+        }
+
+        .address p {
+            margin: 0px 0px 16px 0px;
+            color: #515151;
+            font-size: 16px;
+        }
+
+        .description {
+            max-width: 50%;
+            margin: 0px 0px 16px 0px;
+            line-height: 1.5;
+            font-size: 16px;
+            color: #5a5a5a;
+            position: relative;
+            bottom: 140px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            position: relative;
+            bottom: 140px;
+        }
+
+        .icon {
+            margin: 0 7px;
+            font-size: 24px;
+            color: #333;
+            transition: transform 0.3s ease-in-out;
+            text-decoration: none;
+        }
+
+        .social-icons img {
+            width: 40px !important;
+            height: auto !important;
+        }
+
+        .icon:hover {
+            transform: scale(1.2);
+        }
+
+        .call-us {
+            position: relative;
+            bottom: 140px;
+        }
+
+        .call-us h3 {
+            text-align: center;
+            margin: 0px 0px 15.4px 0px;
+            color: #2a2a2a;
+            font-size: 22px;
+        }
+
+        .call-us p {
+            text-align: center;
+            margin: 0px 0px 16px 0px;
+            color: #5a5a5a;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            Organic Oils
+        </div>
+        <div class="tag-line">
+            <p>Extracted with Care</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>The Organic Oil Store for Health Lovers</h2>
+                <p class="punch-line">Experience the Purity and Health Benefits of Organic Oils</p>
+                <h1>Everything Is Better With Organic Products</h1>
+                <a href="./Products.html" class="shop-now">Shop Now</a>
+                <div class="back-to-mainpage">
+                <a href="./index.html" class="back-to-mainpage-link">&#8592; Back to Main Page</a>
+            </div>
+            </div>
+        </section>
+
+        <!-- Rest of the sections -->
+        <section id="home">
+            <h2>Welcome to Our Organic Oil Extraction Business</h2>
+            <p>High-quality organic oils extracted with care for your health and well-being.</p>
+            <!-- Add any additional content or images here -->
+        </section>
+
+        <section class="products" id="products">
+            <h2>Our Products</h2>
+            <p>Explore our range of organic oils for various purposes.</p>
+            <!-- Display your products and descriptions -->
+        </section>
+
+        <section class="testimonials" id="testimonials">
+            <h2>Testimonials</h2>
+            <p>See what our customers have to say about our products and services.</p>
+            <!-- Include customer testimonials/reviews -->
+        </section>
+
+        <section class="about" id="about">
+            <h2>About Us</h2>
+            <p>Learn about our commitment to organic methods and our dedicated team.</p>
+            <div class="company-info">
+                <div class="info-item">
+                    <img src="./Symbols/business.png" alt="Nature Logo">
+                    <h3>Nature of Business</h3>
+                    <h4>Manufacturer</h4>
+                </div>
+                <div class="info-item">
+                    <img src="./Symbols/building.png" alt="Establishment Logo">
+                    <h3>Year of Establishment</h3>
+                    <h4>2018</h4>
+                </div>
+                <div class="info-item">
+                    <img src="./Symbols/Team.png" alt="Employees Logo">
+                    <h3>Total Number of Employees</h3>
+                    <h4>Up to 10 People</h4>
+                </div>
+                <div class="info-item">
+                    <img src="./Symbols/legal.png" alt="Legal Logo">
+                    <h3>Legal Status of Firm</h3>
+                    <h4>Individual - Proprietor</h4>
+                </div>
+                <div class="info-item" style="margin-left: 38%;">
+                    <img src="./Symbols/Gst.png" alt="GST Logo">
+                    <h3>GST Number</h3>
+                    <h4>27ALYPG2324C1Z7</h4>
+                </div>
+            </div>
+            <!-- Add more details about your company here -->
+        </section>
+
+        <section class="contact-section" class="contact" id="contact">
+            <h2 class="get-in-touch">Get In Touch</h2>
+            <div class="contact-left">
+                <div class="address">
+                    <h3>Address</h3>
+                    <p>Plot No. 12, Shri Siddhivinayak Samruddhi, Handewadi, Haveli - Pune, 412308, India</p>
+                </div>
+            </div>
+            <div class="contact-right">
+                <div class="email">
+                    <h3>Email Us</h3>
+                    <p>mangalgoatfarm@gmail.com</p>
+                </div>
+            </div>
+            <p class="description">
+                We'd love to hear from you. Feel free to contact us through the channels below. Our team is dedicated to
+                providing excellent service and addressing any inquiries or concerns you may have.
+            </p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/mangal.gulage" class="icon" title="Facebook"><img
+                        src="./Symbols/Social Media/facebook.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/mangalagro/" class="icon" title="Instagram"><img
+                        src="./Symbols/Social Media/Insta.png" alt="Instagram"></a>
+                <a href="https://www.youtube.com/channel/UCeE5WBJ6ZAdXU-sJQ_ZvMzQ?view_as=subscriber" class="icon"
+                    title="Youtube"><img src="./Symbols/Social Media/Youtube.png" alt="Youtube"></a>
+                <a href="https://www.blogger.com/onboarding#allposts" class="icon" title="Blogger"><img
+                        src="./Symbols/Social Media/Blogger.png" alt="Blogger"></a>
+            </div>
+            <div class="call-us">
+                <h3>Call Us</h3>
+                <p>9822624149</p>
+            </div>
+            <!-- Add contact information and a contact form -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Organic Oil Extraction. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Product Details</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=PT+Serif&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    * {
+        color: #33006f;
+        margin: 0;
+        padding: 0;
+        /* box-sizing: content-box; */
+        box-sizing: border-box;
+        font-family: 'Libre Baskerville', serif;
+        font-family: 'PT Serif', serif;
+    }
+
+    /* Header Styles */
+    .header {
+        display: flex;
+        align-items: center;
+        padding: 20px 20px;
+        background-color: #33006f;
+        font-weight: 600;
+    }
+
+    .header>.logo {
+        display: flex;
+        justify-self: flex-end;
+    }
+
+    .logo img {
+        max-width: 100px;
+        /* Adjust size as needed */
+    }
+
+    .company-name h2 {
+        font-size: 24px;
+        color: white;
+        /* Other styles for company name */
+    }
+
+    /* Navigation Styles */
+    .navigation {
+        display: flex;
+        justify-content: flex-end;
+        padding: 10px 20px;
+        align-items: center;
+    }
+
+    .nav-links ul {
+        list-style: none;
+        display: flex;
+        position: relative;
+        top: 20px;
+        left: 10px;
+    }
+
+    .nav-links ul li:hover {
+        font-weight: 600;
+    }
+
+    .nav-links ul li {
+        margin-right: 20px;
+        text-decoration: none;
+
+    }
+
+    .nav-links ul li:last-child {
+        margin-right: 0;
+    }
+
+    /* Product Title Styles */
+    .product-title {
+        display: flex;
+        /* align-items: center; */
+        padding: 20px;
+    }
+
+    .product-title img {
+        width: 350px;
+        height: 450px;
+        /* Adjust size as needed */
+        margin-right: 20px;
+        border: 2px solid black;
+    }
+
+    .product-title h3 {
+        align-self: flex-start;
+        font-size: 24px;
+        /* Other styles for product title */
+    }
+
+    /* Product Images Styles */
+    .product-images {
+        padding: 20px;
+    }
+
+    .image-banner {
+        position: relative;
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Small Images Styles */
+    .small-images {
+        max-width: 350px;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 20px;
+
+    }
+
+    .small-images img {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        /* Other styles for small images */
+    }
+
+    .checked {
+        color: orange;
+    }
+
+    /* Price Styles */
+    .price {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        margin-left: 49%;
+        justify-content: space-between;
+        max-width: 50%;
+        position: relative;
+        bottom:550px;
+    }
+
+    /* Include Hover Animations for Star Ratings and Other Elements as Needed */
+    .star-rating:hover {
+        transition: all 0.4s linear;
+        transform: scale(1.5);
+        /* Styles for star ratings */
+    }
+
+    /* Delivery Information Styles */
+    .delivery-info {
+        padding: 10px 0px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+        margin-left: 50%;
+        position: relative;
+        justify-content: space-around;
+        bottom: 550px;
+    }
+
+    .quantity {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        width: 50%;
+        margin-left: 50%;
+        justify-content: space-around;
+        position: relative;
+        bottom: 525px;
+    }
+
+    .quantity select {
+        margin-right: 100px;
+        margin-left: -30px;
+        border:solid #33006f;
+        color: #33006f;
+        padding: 5px;
+        font-size: 14px;
+        /* Other styles for select element */
+    }
+
+    .quantity-control {
+        display: flex;
+        align-items: center;
+        color: #33006f;
+        border: 2px solid #33006f;
+    }
+
+    .quantity-control div {
+        cursor: pointer;
+        /* Other styles for quantity control */
+    }
+
+    /* Call to Action Styles */
+    .call-to-action {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .call-to-action button {
+        margin-right: 10px;
+        /* Other styles for buttons */
+    }
+
+    .product-benefits {
+        list-style: none;
+        padding-top: 10px;
+    }
+
+    .product-benefits li {
+        margin-bottom: 5px;
+        /* Other styles for bullet points */
+    }
+
+    /* Product Description Styles */
+    .product-description {
+        padding: 20px;
+    }
+
+    .product-description h4 {
+        font-size: 20px;
+        /* Other styles for detailed description title */
+    }
+
+    .product-description p {
+        /* Other styles for product description text */
+    }
+
+    /* Reviews and Ratings Styles */
+    .reviews {
+        padding: 20px;
+    }
+
+    .review-container {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 10px;
+        /* Other styles for review containers */
+    }
+
+    .review-container p {
+        margin-bottom: 5px;
+        /* Other styles for review text */
+    }
+
+    .review-container .star-rating {
+        /* Styles for star ratings */
+    }
+
+    /* Hover Animations */
+    .button:hover {
+        background-color: #333;
+        color: #fff;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Quantity Increase/Decrease Styles */
+    .quantity-control div {
+        cursor: pointer;
+        border: 1px solid #33006f;
+        border-radius: 2px;
+        font-size: 14px;
+        padding: 7px 5px;
+        width: 20px;
+        font-weight: 600;
+        text-align: center;
+        transition: background-color 0.3s ease;
+    }
+
+    .quantity-control div:hover {
+        background-color: #f0f0f0;
+    }
+
+    /*Styling for Delivery Details*/
+
+    .location-symbol {
+            font-size: 24px;
+            margin-right: 8px;
+        }
+
+        input[type="number"] {
+            padding: 8px;
+            width: 150px;
+        }
+
+        #pincode{
+            border: none;
+            outline: none;
+            margin-left: -5px;
+        }
+
+        .delivery-info p {
+            margin: 8px 0 10px 80px;
+            font-size: 15px;
+        }
+
+        .delivery-method button {
+            padding: 8px 12px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-left:80px ;
+            
+        }
+
+        .delivery-method button:hover {
+            background-color: #0056b3;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90%;
+            max-height: 90%;
+            overflow: auto;
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            z-index: 9999;
+            border-radius: 10px;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
+        }
+
+        .change-button {
+            padding: 8px 12px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-bottom: 5px;
+        }
+
+        .change-button:hover {
+            background-color: #0056b3;
+        }
+</style>
+
+<body style="max-width: 50%; margin-left: auto; margin-right: auto; border: 2px solid #33006f;">
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="company-name">
+            <h2>"Chaitanya Organic Oils"</h2>
+        </div>
+        <div class="logo">
+            <img src="company-logo.png" alt="Company Logo">
+        </div>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav class="navigation">
+        <div class="logo">
+            <img src="company-logo.png" alt="Company Logo">
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="./index.html" style="text-decoration: none;">Home</a></li>
+                <li><a href="./Products.html" style="text-decoration: none;">Products</a></li>
+                <li><a href="./Contact.html" style="text-decoration: none;">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <hr>
+
+    <!-- Product Title -->
+    <div class="product-title">
+        <img src="product-image.jpg" alt="Product Image">
+        <h3>Product Name</h3>
+        <div class="product-images">
+            <div class="image-banner">
+                <!-- Images and Circular Indicators -->
+                <!-- Add JavaScript for image carousel functionality -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Images -->
+    <div class="small-images">
+        <img src="small-image1.jpg" alt="Small Image 1">
+        <img src="small-image2.jpg" alt="Small Image 2">
+        <img src="small-image3.jpg" alt="Small Image 3">
+    </div>
+
+
+    <!-- Price & Star Rating -->
+    <div class="price">
+        <div class="star-rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span>3/5</span>
+            <!-- JavaScript can dynamically change the star colors -->
+        </div>
+        <p style="font-weight: 950;">Price: $XX.XX</p>
+    </div>
+
+    <!-- Shipping Information -->
+    <div class="delivery-info">
+        <h4 style="margin-left: 6px;">Delivery</h4>
+        <script src="https://cdn.lordicon.com/lordicon.js"></script>
+        <lord-icon src="https://cdn.lordicon.com/zzjjvkam.json" trigger="loop" delay="2500" stroke="bold"
+            colors="primary:#33006f,secondary:#33006f" style="width:40px;height:30px; margin-left: 12px;">
+        </lord-icon>
+        <input type="number" id="pincode" placeholder="Change Pincode">
+        <button class="change-button">Change</button>
+        <break></break>        
+        <hr style="rotate: 180deg; width: 70%;border: 0.5px solid #33006f;margin-left: 21.5%;">
+        <p><b>Delivery by</b> XYZ <b>|</b> <b>Delivery Charge: </b><span style="color: green;font-weight: 500;">Free</span></p>
+        <div class="delivery-method">
+            <break style="flex-basis: 100%;"></break>
+            <button onclick="openPopup()">View Details</button>
+        </div>
+    </div>
+
+    <div class="overlay" onclick="closePopup()"></div>
+    <div class="popup" id="popup">
+        <label for="saved-address">Select Address:</label>
+        <select id="saved-address">
+            <option value="address1">Address 1</option>
+            <option value="address2">Address 2</option>
+            <option value="address3">Address 3</option>
+        </select>
+        <br><br>
+        <label for="delivery-speed">Delivery Speed:</label>
+        <select id="delivery-speed">
+            <option value="normal">Normal</option>
+            <option value="fast">Fast</option>
+        </select>
+        <br><br>
+        <button class="change-button" onclick="closePopup()">Confirm</button>
+    </div>
+
+    <script>
+        function openPopup() {
+            document.getElementById('popup').style.display = 'block';
+            document.getElementsByClassName('overlay')[0].style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementsByClassName('overlay')[0].style.display = 'none';
+        }
+        function processAddress() {
+            var enteredAddress = document.getElementById('user-address').value;
+            // Here, you can use 'enteredAddress' as needed.
+            console.log('Entered Address:', enteredAddress);
+            // Further processing or sending data to the server can be done here
+        }
+    </script>
+        <!-- Shipping Details -->
+        <div class="quantity" style="font-weight: 600;">
+            <select name="quantity" style="font-weight: 600;">
+                <option value="1">1 ltr</option>
+                <option value="2">2 ltrs</option>
+                <option value="5">5 ltrs</option>
+                <option value="15">15 ltrs</option>
+            </select>
+            <div class="quantity-control">
+                <div class="decrease">-</div>
+                <div class="current-quantity">1</div>
+                <div class="increase">+</div>
+            </div>
+        </div>
+        <p>Hurry up! Only X items left</p>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="call-to-action">
+        <button>Add to Cart</button>
+        <button>Buy Now</button>
+        <ul class="product-benefits">
+            <li>Benefit 1</li>
+            <li>Benefit 2</li>
+            <li>Benefit 3</li>
+            <!-- Add more benefits as needed -->
+        </ul>
+    </div>
+
+    <!-- Product Description -->
+    <div class="product-description">
+        <h4>Detailed Description</h4>
+        <p>Product description text goes here...</p>
+    </div>
+
+    <!-- Reviews and Ratings -->
+    <div class="reviews">
+        <h4>Reviews</h4>
+        <div class="review-container">
+            <p>Review 1</p>
+            <p>Username</p>
+            <div class="star-rating">
+                <!-- Star symbols representing the rating -->
+            </div>
+        </div>
+        <div class="review-container">
+            <p>Review 2</p>
+            <p>Username</p>
+            <div class="star-rating">
+                <!-- Star symbols representing the rating -->
+            </div>
+        </div>
+        <div class="review-container">
+            <p>Review 3</p>
+            <p>Username</p>
+            <div class="star-rating">
+                <!-- Star symbols representing the rating -->
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Production Hub Map</title>
+    <style>
+        /* Add suitable styling for the map container */
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+    <!-- Replace YOUR_API_KEY with your actual Google Maps API key -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script>
+        // Initialize and display the map
+        function initMap() {
+            const productionHub = { lat: 40.7128, lng: -74.0060 }; // Replace with the actual coordinates of your production hub
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 12, // Adjust the zoom level as needed
+                center: productionHub,
+            });
+
+            // Add a marker for the production hub location
+            const marker = new google.maps.Marker({
+                position: productionHub,
+                map: map,
+                title: "Production Hub",
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Production Hub Location</h2>
+    <!-- Map container -->
+    <div id="map"></div>
+
+    <!-- Ensure the API script loads before calling initMap() -->
+    <script>
+        // Call initMap() once the API has loaded
+        google.maps.event.addDomListener(window, "load", initMap);
+    </script>
+</body>
+
+</html>

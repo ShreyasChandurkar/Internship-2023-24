@@ -1,0 +1,210 @@
+/* Resetting Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+}
+
+.logo img {
+    max-width: 100px;
+    /* Adjust size as needed */
+}
+
+.company-name h2 {
+    font-size: 24px;
+    /* Other styles for company name */
+}
+
+/* Navigation Styles */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #e0e0e0;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links ul li {
+    margin-right: 20px;
+}
+
+.nav-links ul li:last-child {
+    margin-right: 0;
+}
+
+/* Product Title Styles */
+.product-title {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.product-title img {
+    max-width: 200px;
+    /* Adjust size as needed */
+    margin-right: 20px;
+}
+
+.product-title h3 {
+    font-size: 24px;
+    /* Other styles for product title */
+}
+
+/* Product Images Styles */
+.product-images {
+    padding: 20px;
+}
+
+.image-banner {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Small Images Styles */
+.small-images {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.small-images img {
+    width: 20px;
+    height: 20px;
+    /* Other styles for small images */
+}
+
+/* Price Styles */
+.price {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+/* Include Hover Animations for Star Ratings and Other Elements as Needed */
+.star-rating {
+    /* Styles for star ratings */
+}
+
+/* Shipping Information Styles */
+.shipping-info {
+    padding: 20px;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.quantity select {
+    margin-right: 10px;
+    /* Other styles for select element */
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-control div {
+    cursor: pointer;
+    /* Other styles for quantity control */
+}
+
+/* Call to Action Styles */
+.call-to-action {
+    text-align: center;
+    padding: 20px;
+}
+
+.call-to-action button {
+    margin-right: 10px;
+    /* Other styles for buttons */
+}
+
+.product-benefits {
+    list-style: none;
+    padding-top: 10px;
+}
+
+.product-benefits li {
+    margin-bottom: 5px;
+    /* Other styles for bullet points */
+}
+
+/* Product Description Styles */
+.product-description {
+    padding: 20px;
+}
+
+.product-description h4 {
+    font-size: 20px;
+    /* Other styles for detailed description title */
+}
+
+.product-description p {
+    /* Other styles for product description text */
+}
+
+/* Reviews and Ratings Styles */
+.reviews {
+    padding: 20px;
+}
+
+.review-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    /* Other styles for review containers */
+}
+
+.review-container p {
+    margin-bottom: 5px;
+    /* Other styles for review text */
+}
+
+.review-container .star-rating {
+    /* Styles for star ratings */
+}
+
+/* Hover Animations */
+.button:hover {
+    background-color: #333;
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Quantity Increase/Decrease Styles */
+.quantity-control div {
+    cursor: pointer;
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.quantity-control div:hover {
+    background-color: #f0f0f0;
+}
+
+
+
+
+
+/* Other Elements Hover Effects */
+/* ... (add hover effects for other elements if required) ... */
+</style></head><body>< !-- All the sections and elements as previously defined --></body></html>

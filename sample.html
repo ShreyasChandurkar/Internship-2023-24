@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Company Information</title>
+    <style>
+        .company-info {
+            display: flex;
+            flex-wrap: wrap;
+            height: 35vh;
+            align-content: flex-start;
+            gap: 20px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
+
+        .info-item {
+            flex: 1 1 20%;
+            /* Adjust the width as needed */
+            text-align: justify;
+            display: flex;
+            flex-direction: column;
+            align-items: first baseline;
+            padding-left: 60px;
+        }
+
+        .info-item img {
+            position:relative;
+            top:58px;
+            right:70px;
+            width: 55px;
+            /* adjust the size as needed */
+            height: 55px;
+            /* adjust the size as needed */
+            background-color: lightgray;
+            border-radius: 50px;
+            margin-left: 50px;
+            box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.7);
+
+        }
+
+        h3 {
+            font-size: 18px;
+            color: #333;
+            margin: 3px 0;
+            /* Adjusted margin */
+        }
+
+        h4 {
+            font-size: 20px;
+            /* Changed font size */
+            color: navy;
+            margin: 1px 0;
+            /* Adjusted margin */
+            /* Added font weight */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="company-info">
+        <div class="info-item">
+            <img src="./Symbols/business.png" alt="Nature Logo">
+            <h3>Nature of Business</h3>
+            <h4>Manufacturer</h4>
+        </div>
+        <div class="info-item">
+            <img src="./Symbols/building.png" alt="Establishment Logo">
+            <h3>Year of Establishment</h3>
+            <h4>2018</h4>
+        </div>
+        <div class="info-item">
+            <img src="./Symbols/Team.png" alt="Employees Logo">
+            <h3>Total Number of Employees</h3>
+            <h4>Up to 10 People</h4>
+        </div>
+        <div class="info-item">
+            <img src="./Symbols/legal.png" alt="Legal Logo">
+            <h3>Legal Status of Firm</h3>
+            <h4>Individual - Proprietor</h4>
+        </div>
+        <div class="info-item" style="margin-left: 38%;">
+            <img src="./Symbols/Gst.png" alt="GST Logo">
+            <h3>GST Number</h3>
+            <h4>27ALYPG2324C1Z7</h4>
+        </div>
+    </div>
+</body>
+
+</html>
